@@ -3,22 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Title</title>
+    <title>Sciecast</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <nav>
-            <ul>
-                <li><a href="#article1">Article 1</a></li>
-                <li><a href="#article2">Article 2</a></li>
-                <li><a href="#article3">Article 3</a></li>
+            <div class="logo">
+                <img src="Resources/Designer.png" alt="Logo">
+                <span>Sciecast</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#article1">Subscription</a>
+                    <div class="nav-dropdown">
+                        <a href="#basic">Basic</a>
+                        <a href="#plus">Plus</a>
+                        <a href="#premium">Premium</a>
+                    </div>
+                </li>
+                <li class="home-link"><a href="#article2">Home</a>
+                    <div class="nav-dropdown">
+                        <a href="#section1">Nature</a>
+                        <a href="#section2">Space</a>
+                        <a href="#section3">Science</a>
+                    </div>
+                </li>
+                <li><a href="#article3">Socials</a>
+                    <div class="nav-dropdown">
+                        <a href="https://youtube.com">YouTube</a>
+                        <a href="https://twitter.com">Twitter</a>
+                        <a href="https://instagram.com">Instagram</a>
+                    </div>
+                </li>
             </ul>
+            <div class="account">
+                <img src="Resources/user.png" alt="Account Icon" class="account-icon">
+                <div class="account-dropdown">
+                    <a href="link1.html">Settings</a>
+                    <a href="link2.html">Subscription</a>
+                    <a href="link3.html">Saved</a>
+                </div>
+            </div>
         </nav>
     </header>
     <main>
         <article id="article1">
-            <img src="https://th.bing.com/th/id/OIP.0hKEd9ol6_N1tbkNioItRQHaEK?rs=1&pid=ImgDetMain" alt="Forest Fire">
+            <img src="path-to-forest-fire-image.jpg" alt="Forest Fire">
             <div class="text-content">
                 <h2>Header 2 - Description/undertitle</h2>
                 <p>Paragraph, article TLDR.</p>
