@@ -7,15 +7,14 @@ body {
 header {
     background-color: #333;
     color: white;
-    padding: 0.625rem 0; /* 10px => 0.625rem */
+    padding: 10px 0;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.625rem 1.25rem; /* 10px 20px => 0.625rem 1.25rem */
-    border-radius: 0.9375rem; /* 15px => 0.9375rem */
+    padding: 10px 20px;
     background-color: #444;
 }
 
@@ -25,45 +24,35 @@ nav .logo {
 }
 
 nav .logo img {
-    max-height: 2.5rem; /* 40px => 2.5rem */
-    margin-right: 0.625rem; /* 10px => 0.625rem */
+    max-height: 40px;
     transition: transform 0.3s;
 }
 
-nav .logo.expanded img {
-    transform: scale(1.2);
+nav .logo span {
+    margin-left: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
+/* Center the nav links between logo and account */
 nav .nav-links {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    margin-left: -11rem;
     display: flex;
-    justify-content: center; /* Center the nav items */
-    flex-grow: 1;
-    padding-right: 3rem;
+    justify-content: center;
 }
 
 nav .nav-links li {
     position: relative;
-    margin: 0 1.25rem; /* 20px => 1.25rem */
-    list-style: none; /* Remove list dots */
+    margin: 0 20px;
 }
 
 nav .nav-links li a {
     color: white;
     text-decoration: none;
     font-size: 1rem;
-}
-
-nav .nav-links .home-link a {
-    font-size: 1.2rem; /* Bigger font size for home link */
-    font-weight: bold; /* Make it stand out */
-}
-
-nav .nav-links .home-link {
-    margin: 0 2.5rem; /* 40px => 2.5rem */
-    text-align: center; /* Align the text in the center */
 }
 
 nav .nav-links li:hover .nav-dropdown {
@@ -74,18 +63,18 @@ nav .nav-dropdown {
     display: none;
     position: absolute;
     top: 100%;
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Adjusts to center */
+    left: 50%;
+    transform: translateX(-50%);
     background-color: #444;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); /* 8px 16px => rem */
-    padding: 0.625rem; /* 10px => 0.625rem */
-    border-radius: 0.3125rem; /* 5px => 0.3125rem */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 5px;
     z-index: 1;
 }
 
 nav .nav-dropdown a {
     display: block;
-    padding: 0.625rem; /* 10px => 0.625rem */
+    padding: 10px;
     color: white;
     text-decoration: none;
 }
@@ -99,9 +88,8 @@ nav .account {
 }
 
 nav .account-icon {
-    max-height: 2.5rem; /* 40px => 2.5rem */
+    max-height: 40px;
     cursor: pointer;
-    padding-right: 3rem;
 }
 
 nav .account-dropdown {
@@ -110,9 +98,9 @@ nav .account-dropdown {
     top: 100%;
     right: 0;
     background-color: #444;
-    padding: 0.625rem; /* 10px => 0.625rem */
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); /* 8px 16px => rem */
-    border-radius: 0.3125rem; /* 5px => 0.3125rem */
+    padding: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
     z-index: 1;
 }
 
@@ -122,7 +110,7 @@ nav .account:hover .account-dropdown {
 
 nav .account-dropdown a {
     display: block;
-    padding: 0.625rem; /* 10px => 0.625rem */
+    padding: 10px;
     color: white;
     text-decoration: none;
 }
@@ -132,26 +120,53 @@ nav .account-dropdown a:hover {
 }
 
 main {
-    padding: 1.25rem; /* 20px => 1.25rem */
+    padding: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
 }
 
 article {
     display: flex;
-    margin-bottom: 1.25rem; /* 20px => 1.25rem */
+    flex-direction: column;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 article img {
-    max-width: 12.5rem; /* 200px => 12.5rem */
-    margin-right: 1.25rem; /* 20px => 1.25rem */
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 .text-content {
-    max-width: 37.5rem; /* 600px => 37.5rem */
+    padding: 15px;
+}
+
+.text-content h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+    color: #444;
+}
+
+.text-content h2 {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.text-content p {
+    font-size: 1rem;
+    color: #777;
 }
 
 footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 0.625rem 0; /* 10px => 0.625rem */
+    padding: 10px 0;
 }
