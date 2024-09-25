@@ -126,8 +126,11 @@ main {
 
 .grid-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);  /* Three columns for the subscription plans */
     gap: 20px;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1200px;  /* Restrict the maximum width for better centering */
 }
 
 article {
@@ -137,32 +140,38 @@ article {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-article img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-.text-content {
-    padding: 15px;
+    padding: 20px;
+    text-align: center;  /* Center text within each article */
 }
 
 .text-content h1 {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 1.5rem;
-    color: #444;
+    font-size: 2rem;
+    color: #333;
 }
 
 .text-content h2 {
-    font-size: 1.2rem;
-    color: #555;
+    font-size: 1.5rem;
+    color: #666;
+    margin-bottom: 15px;
 }
 
 .text-content p {
     font-size: 1rem;
     color: #777;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
 }
 
 footer {
