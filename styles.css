@@ -1,17 +1,18 @@
-body {
+body { /* Her forandrer jeg på skrift type for hele html koden og fjerner default margin og padding. Legger til bakgrunns farge */
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #333;
 }
 
-header {
+header { /* Farge og padding her */
     background-color: #333;
     color: white;
     padding: 10px 0;
 }
 
-nav {
+nav { /* Sorterer måten tingene skal ligge i navigasjonen ved å bruke justify content og align items, legger til padding for å ha mellomrom mellom objektene
+    og litt annerledes bakgrunn farge for å skille ut navigasjonen fra alt annet. */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -24,9 +25,8 @@ nav .logo {
     align-items: center;
 }
 
-nav .logo img {
+nav .logo img { /* setter maks størelse på logo  */
     max-height: 40px;
-    transition: transform 0.3s;
 }
 
 nav .logo span {
@@ -35,31 +35,33 @@ nav .logo span {
     font-weight: bold;
 }
 
-/* Center the nav links between logo and account */
+/* Fjerner list punkter, fjerner default margin og padding,  legger til litt margin på venstre siden for å sentrere navigasjonen */
 nav .nav-links {
     list-style-type: none;
     margin: 0;
     padding: 0;
     margin-left: -9rem;
     display: flex;
-    justify-content: center;
 }
 
-nav .nav-links li {
+/* Her kobler jeg under lenkene sammen med hoved knappene sånn at de kommer under og ikke noe annet sted på siden */
+nav .nav-links li { 
     position: relative;
     margin: 0 20px;
 }
-
+/* Fjerner underlinje for lenkene og setter farge og tekst størelse */
 nav .nav-links li a {
     color: white;
     text-decoration: none;
     font-size: 1rem;
 }
 
+/* Her gjør jeg under lenkene synlig når man hoverer over hoved lenkene */
 nav .nav-links li:hover .nav-dropdown {
     display: block;
 }
 
+/* Her har jeg properties for selve drop down under lenkene, bytter på posisjonen at den ikke forandres, plasseringen, legger til skygge og farge sånn at man kan litt enklere skille ut under menyen og hoved navigasjonen */
 nav .nav-dropdown {
     display: none;
     position: absolute;
@@ -73,6 +75,7 @@ nav .nav-dropdown {
     z-index: 1;
 }
 
+/* Bytter på farge, fjerner underlinje, legger til hover farge bytte */
 nav .nav-dropdown a {
     display: block;
     padding: 10px;
@@ -120,16 +123,20 @@ nav .account-dropdown a:hover {
     background-color: #555;
 }
 
+/* Skaper litt space rundt artikklene */
 main {
     padding: 20px;
 }
 
+/* Her er selve griddet artikklene følger sånn at de står organisert og ikke bare etter hver andre ned over. 1fr er 1 fraction av plasset 
+som er tilgjengelig. Det vil si at artikklene skal ta av 50% siden, 1/2 del hver. hvis jeg setter 1fr og 2fr artikkel nr 2 blir 2 ganger større */
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
 }
 
+/* gjør at teksten går nedover og ikke på siden av bildet, setter grenser for bildet om det er for stort så blir den kuttet og farge */
 article {
     display: flex;
     flex-direction: column;
@@ -145,6 +152,7 @@ article img {
     object-fit: cover;
 }
 
+/* Bytter på tekst størelse og type */
 .text-content {
     padding: 15px;
 }
@@ -165,9 +173,35 @@ article img {
     color: #777;
 }
 
+/* endrer på footer farge og tekst plassering */
 footer {
     background-color: #222;
     color: white;
     text-align: center;
     padding: 10px 0;
+}
+
+/* Bytter på fargen til ikonene og fjerner understreker for anchors, setter transition fart for når den bytter farge ved hover, de fargene sett jeg helt på bunnen av siden. */
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #00acee;
+}
+
+.social-icons a:nth-child(2):hover {
+    color: #E4405F;
+}
+
+.social-icons a:nth-child(3):hover {
+    color: #FF0000;
 }

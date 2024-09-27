@@ -120,6 +120,8 @@ nav .account-dropdown a:hover {
 
 main {
     padding: 20px;
+    flex-grow: 1;
+    overflow-y: auto;
 }
 
 .content-wrapper {
@@ -167,11 +169,36 @@ article img {
     color: #777;
 }
 
+
 footer {
     background-color: #222;
     color: white;
     text-align: center;
     padding: 10px 0;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #00acee;
+}
+
+.social-icons a:nth-child(2):hover {
+    color: #E4405F;
+}
+
+.social-icons a:nth-child(3):hover {
+    color: #FF0000;
 }
 
 body, html {
@@ -181,7 +208,3 @@ body, html {
     flex-direction: column;
 }
 
-main {
-    flex-grow: 1;
-    overflow-y: auto;
-}
